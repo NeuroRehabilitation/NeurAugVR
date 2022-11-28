@@ -296,13 +296,17 @@
           <!-- .row -->
 
           <p class="colophon">
-            copyright 2014 Company name. Designed by
-            <a
-              href="http://www.vandelaydesign.com/"
-              title="Designed by VandelayDesign.com"
-              target="_blank"
-              >VandelayDesign.com</a
-            >. All rights reserved
+            &copy;
+            <span id="copyright">
+              <script>
+                document
+                  .getElementById("copyright")
+                  .appendChild(
+                    document.createTextNode(new Date().getFullYear())
+                  );
+              </script>
+            </span>
+            <b>NeurAugVR</b>. All rights reserved.
           </p>
         </div>
         <!-- .container -->

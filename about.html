@@ -1017,9 +1017,17 @@
           <div class="row">
             <div class="col-md-12">
               <p class="colophon">
-                © &nbsp
-                <span>2021</span>
-                &nbsp NeurAugVR. All rights reserved. &nbsp
+                &copy;
+                <span id="copyright">
+                  <script>
+                    document
+                      .getElementById("copyright")
+                      .appendChild(
+                        document.createTextNode(new Date().getFullYear())
+                      );
+                  </script>
+                </span>
+                <b>NeurAugVR</b>. All rights reserved.
               </p>
             </div>
             <!-- .container -->
