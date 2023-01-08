@@ -2137,7 +2137,7 @@
         f
       );
     })());
-}.call(this));
+}).call(this);
 
 /* Owl Carousel 2 */
 !(function (a, b, c, d) {
