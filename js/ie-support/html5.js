@@ -33,8 +33,8 @@
       (e = d.cache[a]
         ? d.cache[a].cloneNode()
         : p.test(a)
-        ? (d.cache[a] = d.createElem(a)).cloneNode()
-        : d.createElem(a)),
+          ? (d.cache[a] = d.createElem(a)).cloneNode()
+          : d.createElem(a)),
       !e.canHaveChildren || o.test(a) || e.tagUrn ? e : d.frag.appendChild(e)
     );
   }
