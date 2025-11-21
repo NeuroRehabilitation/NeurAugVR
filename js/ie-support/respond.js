@@ -1,7 +1,7 @@
 /*! Respond.js v1.4.2: min/max-width media query polyfill * Copyright 2013 Scott Jehl
  * Licensed under https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
  */
-!(function (a) {
+(!(function (a) {
   "use strict";
   a.matchMedia =
     a.matchMedia ||
@@ -37,7 +37,7 @@
       u(!0);
     }
     var c = {};
-    (a.respond = c), (c.update = function () {});
+    ((a.respond = c), (c.update = function () {}));
     var d = [],
       e = (function () {
         var b = !1;
@@ -124,7 +124,7 @@
             o = s[s.length - 1],
             r = new Date().getTime();
           if (b && g && p > r - g)
-            return a.clearTimeout(h), (h = a.setTimeout(u, p)), void 0;
+            return (a.clearTimeout(h), (h = a.setTimeout(u, p)), void 0);
           g = r;
           for (var v in l)
             if (l.hasOwnProperty(v)) {
@@ -134,12 +134,12 @@
                 z = null === x,
                 A = null === y,
                 B = "em";
-              x && (x = parseFloat(x) * (x.indexOf(B) > -1 ? i || t() : 1)),
+              (x && (x = parseFloat(x) * (x.indexOf(B) > -1 ? i || t() : 1)),
                 y && (y = parseFloat(y) * (y.indexOf(B) > -1 ? i || t() : 1)),
                 (w.hasquery &&
                   ((z && A) || !(z || e >= x) || !(A || y >= e))) ||
                   (f[w.media] || (f[w.media] = []),
-                  f[w.media].push(m[w.rules]));
+                  f[w.media].push(m[w.rules])));
             }
           for (var C in n)
             n.hasOwnProperty(C) &&
@@ -151,13 +151,13 @@
             if (f.hasOwnProperty(D)) {
               var E = j.createElement("style"),
                 F = f[D].join("\n");
-              (E.type = "text/css"),
+              ((E.type = "text/css"),
                 (E.media = D),
                 q.insertBefore(E, o.nextSibling),
                 E.styleSheet
                   ? (E.styleSheet.cssText = F)
                   : E.appendChild(j.createTextNode(F)),
-                n.push(E);
+                n.push(E));
             }
         },
         v = function (a, b, d) {
@@ -168,17 +168,17 @@
               return a.replace(c.regex.urls, "$1" + b + "$2$3");
             },
             h = !f && d;
-          b.length && (b += "/"), h && (f = 1);
+          (b.length && (b += "/"), h && (f = 1));
           for (var i = 0; f > i; i++) {
             var j, k, n, o;
-            h
+            (h
               ? ((j = d), m.push(g(a)))
               : ((j = e[i].match(c.regex.findStyles) && RegExp.$1),
                 m.push(RegExp.$2 && g(RegExp.$2))),
               (n = j.split(",")),
-              (o = n.length);
+              (o = n.length));
             for (var p = 0; o > p; p++)
-              (k = n[p]),
+              ((k = n[p]),
                 l.push({
                   media:
                     (k.split("(")[0].match(c.regex.only) && RegExp.$2) || "all",
@@ -190,7 +190,7 @@
                   maxw:
                     k.match(c.regex.maxw) &&
                     parseFloat(RegExp.$1) + (RegExp.$2 || ""),
-                });
+                }));
           }
           u();
         },
@@ -198,11 +198,11 @@
           if (d.length) {
             var b = d.shift();
             f(b.href, function (c) {
-              v(c, b.href, b.media),
+              (v(c, b.href, b.media),
                 (o[b.href] = !0),
                 a.setTimeout(function () {
                   w();
-                }, 0);
+                }, 0));
             });
           }
         },
@@ -225,11 +225,11 @@
           }
           w();
         };
-      x(),
+      (x(),
         (c.update = x),
         (c.getEmValue = t),
         a.addEventListener
           ? a.addEventListener("resize", b, !1)
-          : a.attachEvent && a.attachEvent("onresize", b);
+          : a.attachEvent && a.attachEvent("onresize", b));
     }
-  })(this);
+  })(this));

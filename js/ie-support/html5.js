@@ -16,14 +16,14 @@
   }
   function e(a, b) {
     var c = t.elements;
-    "string" != typeof c && (c = c.join(" ")),
+    ("string" != typeof c && (c = c.join(" ")),
       "string" != typeof a && (a = a.join(" ")),
       (t.elements = c + " " + a),
-      j(b);
+      j(b));
   }
   function f(a) {
     var b = s[a[q]];
-    return b || ((b = {}), r++, (a[q] = r), (s[r] = b)), b;
+    return (b || ((b = {}), r++, (a[q] = r), (s[r] = b)), b);
   }
   function g(a, c, d) {
     if ((c || (c = b), l)) return c.createElement(a);
@@ -46,7 +46,7 @@
     return e;
   }
   function i(a, b) {
-    b.cache ||
+    (b.cache ||
       ((b.cache = {}),
       (b.createElem = a.createElement),
       (b.createFrag = a.createDocumentFragment),
@@ -60,10 +60,14 @@
           d()
             .join()
             .replace(/[\w\-:]+/g, function (a) {
-              return b.createElem(a), b.frag.createElement(a), 'c("' + a + '")';
+              return (
+                b.createElem(a),
+                b.frag.createElement(a),
+                'c("' + a + '")'
+              );
             }) +
           ");return n}",
-      )(t, b.frag));
+      )(t, b.frag)));
   }
   function j(a) {
     a || (a = b);
@@ -93,7 +97,7 @@
   !(function () {
     try {
       var a = b.createElement("a");
-      (a.innerHTML = "<xyz></xyz>"),
+      ((a.innerHTML = "<xyz></xyz>"),
         (k = "hidden" in a),
         (l =
           1 == a.childNodes.length ||
@@ -105,9 +109,9 @@
               "undefined" == typeof a.createDocumentFragment ||
               "undefined" == typeof a.createElement
             );
-          })());
+          })()));
     } catch (c) {
-      (k = !0), (l = !0);
+      ((k = !0), (l = !0));
     }
   })();
   var t = {
@@ -124,5 +128,5 @@
     createDocumentFragment: h,
     addElements: e,
   };
-  (a.html5 = t), j(b);
+  ((a.html5 = t), j(b));
 })(this, document);

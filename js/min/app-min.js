@@ -1,10 +1,10 @@
 !(function ($, n, o) {
-  $(n).ready(function () {
-    $(".mobile-navigation").append($(".main-navigation .menu").clone()),
+  ($(n).ready(function () {
+    ($(".mobile-navigation").append($(".main-navigation .menu").clone()),
       $(".menu-toggle").click(function () {
         $(".mobile-navigation").slideToggle();
       }),
-      $(".hero").flexslider({ directionNav: !1, controlNav: !0 });
+      $(".hero").flexslider({ directionNav: !1, controlNav: !0 }));
     var n = $(".map"),
       o = n.data("latitude"),
       e = n.data("longitude");
@@ -14,5 +14,5 @@
         marker: { latLng: [o, e] },
       });
   }),
-    $(o).load(function () {});
+    $(o).load(function () {}));
 })(jQuery, document, window);
