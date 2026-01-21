@@ -2556,7 +2556,6 @@
           }, this._invalidated),
           e = {};
         c > b;
-
       )
         ((this._invalidated.all ||
           a.grep(this._pipe[b].filter, d).length > 0) &&
@@ -2931,7 +2930,6 @@
             revert = f.rtl ? 1 : -1,
               c = this.$stage.width() - this.$element.width();
             (d = this.coordinates(e)) && !(d * revert >= c);
-
           )
             b = ++e;
         }
@@ -3312,7 +3310,6 @@
                     this.load(b);
                   }, this);
                 e++ < d;
-
               )
                 (this.load(g / 2 + this._core.relative(f)),
                   g && a.each(this._core.clones(this._core.relative(f++)), h));
